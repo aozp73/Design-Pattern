@@ -1,15 +1,15 @@
 package creational;
 
-public class SingletonPatternBasic {
-    private static SingletonPatternBasic singletonInstance = null;
+public class SingletonBasic {
+    private static SingletonBasic singletonInstance = null;
 
     // private 생성자: 외부에서의 인스턴스 생성 제한
-    private SingletonPatternBasic() {}
+    private SingletonBasic() {}
 
     // getInstance 메서드를 통해 생성된 인스턴스 반환, 인스턴스가 없을 경우 새로 생성
-    public static SingletonPatternBasic getInstance() {
+    public static SingletonBasic getInstance() {
         if (singletonInstance == null) {
-            singletonInstance = new SingletonPatternBasic();
+            singletonInstance = new SingletonBasic();
         }
         return singletonInstance;
     }
@@ -20,8 +20,8 @@ public class SingletonPatternBasic {
 
     public static void main(String[] args) {
         // SingletonPattern 인스턴스 생성 및 사용
-        SingletonPatternBasic instance1 = SingletonPatternBasic.getInstance();
-        SingletonPatternBasic instance2 = SingletonPatternBasic.getInstance();
+        SingletonBasic instance1 = SingletonBasic.getInstance();
+        SingletonBasic instance2 = SingletonBasic.getInstance();
 
         instance1.singletonTest();
         instance2.singletonTest();
