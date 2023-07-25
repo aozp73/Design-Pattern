@@ -1,15 +1,15 @@
 package creational;
 
-public class SingletonDoubleCheckedLocking {
-    private volatile static SingletonDoubleCheckedLocking uniqueInstance;
+public class Singleton_DoubleCheckedLocking {
+    private volatile static Singleton_DoubleCheckedLocking uniqueInstance;
 
-    private SingletonDoubleCheckedLocking() {}
+    private Singleton_DoubleCheckedLocking() {}
 
-    public static SingletonDoubleCheckedLocking getInstance() {
+    public static Singleton_DoubleCheckedLocking getInstance() {
         if (uniqueInstance == null) {
-            synchronized (SingletonDoubleCheckedLocking.class) {
+            synchronized (Singleton_DoubleCheckedLocking.class) {
                 if (uniqueInstance == null) {
-                    uniqueInstance = new SingletonDoubleCheckedLocking();
+                    uniqueInstance = new Singleton_DoubleCheckedLocking();
                 }
             }
         }
@@ -22,8 +22,8 @@ public class SingletonDoubleCheckedLocking {
 
     public static void main(String[] args) {
         // SingletonPattern 인스턴스 생성 및 사용
-        SingletonDoubleCheckedLocking instance1 = SingletonDoubleCheckedLocking.getInstance();
-        SingletonDoubleCheckedLocking instance2 = SingletonDoubleCheckedLocking.getInstance();
+        Singleton_DoubleCheckedLocking instance1 = Singleton_DoubleCheckedLocking.getInstance();
+        Singleton_DoubleCheckedLocking instance2 = Singleton_DoubleCheckedLocking.getInstance();
 
         instance1.singletonTest();
         instance2.singletonTest();
