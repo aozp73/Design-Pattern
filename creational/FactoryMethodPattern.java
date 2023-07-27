@@ -37,7 +37,7 @@ class ConcreteCreatorB extends Creator {
     }
 }
 
-public class FactoryMethod {
+public class FactoryMethodPattern {
     public static void main(String[] args) {
         Creator creatorA = new ConcreteCreatorA();
         Creator creatorB = new ConcreteCreatorB();
